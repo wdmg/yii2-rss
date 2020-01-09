@@ -1,0 +1,44 @@
+{
+  "name": "wdmg/yii2-rss",
+  "description": "RSS-feed generator",
+  "keywords": ["yii2", "yii2-rss", "rss", "rss-feeds", "yandex-turbo", "rss", "generator", "wdmg"],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "version": "1.0.0",
+  "homepage": "https://github.com/wdmg/yii2-rss",
+  "support": {
+    "source": "https://github.com/wdmg/yii2-rss",
+    "issues": "https://github.com/wdmg/yii2-rss/issues"
+  },
+  "authors": [
+    {
+      "name": "Alexsander Vyshnyvetskyy",
+      "email": "alex.vyshnyvetskyy@gmail.com"
+    },
+    {
+      "name": "W.D.M.Group, Ukraine",
+      "email": "wdmg.com.ua@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "^2.0.20",
+    "wdmg/yii2-base": "^1.1.6"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "wdmg\\rss\\": ""
+    }
+  },
+  "extra": {
+    "options": {
+      "routePrefix": "admin",
+      "supportModels": {
+        "news": "wdmg\\news\\models\\News"
+      },
+      "cacheExpire": 3600,
+      "channelOptions": [],
+      "feedRoute": "/rss"
+    }
+  }
+}
