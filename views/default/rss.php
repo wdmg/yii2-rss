@@ -1,3 +1,8 @@
+<?php
+
+use yii\helpers\Html;
+
+?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL ?>
 <rss version="2.0"
      xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -12,10 +17,10 @@
         <title><?= $channel['title']; ?></title>
 <?php endif; ?>
 <?php if (isset($channel['feed_link'])) : ?>
-        <atom:link href="<?= $channel['feed_link']; ?>" rel="self" type="application/rss+xml" />
+        <atom:link href="<?= Html::encode($channel['feed_link']); ?>" rel="self" type="application/rss+xml" />
 <?php endif; ?>
 <?php if (isset($channel['link'])) : ?>
-        <link><?= $channel['link']; ?></link>
+        <link><?= Html::encode($channel['link']); ?></link>
 <?php endif; ?>
 <?php if (isset($channel['description'])) : ?>
         <description><?= $channel['description']; ?></description>
@@ -37,7 +42,7 @@
 <?php endif; ?>
 <?php if (isset($channel['image'])) : ?>
         <image>
-            <url><?= $channel['image']['url']; ?></url>
+            <url><?= Html::encode($channel['image']['url']); ?></url>
             <title><?= $channel['image']['title']; ?></title>
             <link><?= $channel['image']['link']; ?></link>
             <width><?= $channel['image']['width']; ?></width>
@@ -48,7 +53,7 @@
 <?php if (isset($item['url']) && isset($item['content'])) : ?>
         <item>
             <title><?= ($item['title']) ? $item['title'] : $item['name']; ?></title>
-            <link><?= $item['url']; ?></link>
+            <link><?= Html::encode($item['url']); ?></link>
             <pubDate><?= $item['updated_at']; ?></pubDate>
 <?php if (isset($item['image'])) :?>
             <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="<?= $item['image']; ?>" />
