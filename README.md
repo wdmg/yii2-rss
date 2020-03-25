@@ -1,4 +1,4 @@
-[![Progress](https://img.shields.io/badge/required-Yii2_v2.0.13-blue.svg)](https://packagist.org/packages/yiisoft/yii2)
+[![Progress](https://img.shields.io/badge/required-Yii2_v2.0.33-blue.svg)](https://packagist.org/packages/yiisoft/yii2)
 [![Github all releases](https://img.shields.io/github/downloads/wdmg/yii2-rss/total.svg)](https://GitHub.com/wdmg/yii2-rss/releases/)
 [![GitHub version](https://badge.fury.io/gh/wdmg/yii2-rss.svg)](https://github.com/wdmg/yii2-rss)
 ![Progress](https://img.shields.io/badge/progress-in_development-red.svg)
@@ -9,7 +9,7 @@ RSS-feed generator
 
 # Requirements 
 * PHP 5.6 or higher
-* Yii2 v.2.0.20 and newest
+* Yii2 v.2.0.33 and newest
 * [Yii2 Base](https://github.com/wdmg/yii2-base) module (required)
 * [Yii2 Options](https://github.com/wdmg/yii2-options) module (optionality)
 * [Yii2 News](https://github.com/wdmg/yii2-news) module (support)
@@ -65,4 +65,5 @@ Use the `Module::dashboardNavItems()` method of the module to generate a navigat
     ?>
 
 # Status and version [in progress development]
+* v.1.0.1 - Added pagination, up to date dependencies
 * v.1.0.0 - Added console, migrations and controller, support for Pages and News models

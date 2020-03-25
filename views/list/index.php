@@ -33,6 +33,21 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_at',
             'status'
         ],
+        'pager' => [
+            'options' => [
+                'class' => 'pagination',
+            ],
+            'maxButtonCount' => 5,
+            'activePageCssClass' => 'active',
+            'prevPageCssClass' => '',
+            'nextPageCssClass' => '',
+            'firstPageCssClass' => 'previous',
+            'lastPageCssClass' => 'next',
+            'firstPageLabel' => Yii::t('app/modules/rss', 'First page'),
+            'lastPageLabel'  => Yii::t('app/modules/rss', 'Last page'),
+            'prevPageLabel'  => Yii::t('app/modules/rss', '&larr; Prev page'),
+            'nextPageLabel'  => Yii::t('app/modules/rss', 'Next page &rarr;')
+        ],
     ]); ?>
     <hr/>
     <div class="btn-group">
