@@ -1,6 +1,6 @@
-[![Progress](https://img.shields.io/badge/required-Yii2_v2.0.33-blue.svg)](https://packagist.org/packages/yiisoft/yii2)
-[![Github all releases](https://img.shields.io/github/downloads/wdmg/yii2-rss/total.svg)](https://GitHub.com/wdmg/yii2-rss/releases/)
-[![GitHub version](https://badge.fury.io/gh/wdmg/yii2-rss.svg)](https://github.com/wdmg/yii2-rss)
+[![Yii2](https://img.shields.io/badge/required-Yii2_v2.0.33-blue.svg)](https://packagist.org/packages/yiisoft/yii2)
+[![Downloads](https://img.shields.io/packagist/dt/wdmg/yii2-rss.svg)](https://packagist.org/packages/wdmg/yii2-rss)
+[![Packagist Version](https://img.shields.io/packagist/v/wdmg/yii2-rss.svg)](https://packagist.org/packages/wdmg/yii2-rss)
 ![Progress](https://img.shields.io/badge/progress-in_development-red.svg)
 [![GitHub license](https://img.shields.io/github/license/wdmg/yii2-rss.svg)](https://github.com/wdmg/yii2-rss/blob/master/LICENSE)
 
@@ -13,6 +13,7 @@ RSS-feed generator
 * [Yii2 Base](https://github.com/wdmg/yii2-base) module (required)
 * [Yii2 Options](https://github.com/wdmg/yii2-options) module (optionality)
 * [Yii2 News](https://github.com/wdmg/yii2-news) module (support)
+* [Yii2 Blog](https://github.com/wdmg/yii2-blog) module (support)
 
 # Installation
 To install the module, run the following command in the console:
