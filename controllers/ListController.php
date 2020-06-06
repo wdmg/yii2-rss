@@ -68,6 +68,16 @@ class ListController extends Controller
         ]);
     }
 
+    public function actionView() {
+        $module = $this->module;
+        if (Yii::$app->request->isAjax) {
+            return $this->renderAjax('_view', [
+                'path' => $module->getFeedURL()
+            ]);
+        }
+        $this->redirect(['index']);
+    }
+
     /**
      * Clear RSS-feed cache
      *

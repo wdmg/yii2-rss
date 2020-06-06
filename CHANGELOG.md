@@ -1,6 +1,9 @@
 Changelog
 =========
 
+## 1.0.3 (2020-06-06)
+ * Preview of RSS-feed
+ 
 ## 1.0.2 (2020-04-14)
  * Added support for Blog module
  * Fixed models items retrieved

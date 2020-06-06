@@ -60,11 +60,15 @@ use yii\helpers\Html;
 <?php endif; ?>
 <?php if (isset($item['description'])) : ?>
             <description>
-                <![CDATA[<?= $item['description']; ?>]]>
+                <![CDATA[
+                <?= $item['description']; ?>
+                ]]>
             </description>
 <?php endif; ?>
             <content:encoded>
-                <![CDATA[<?= $item['content']; ?>]]>
+                <![CDATA[
+                <?= $item['content']; ?>
+                ]]>
             </content:encoded>
         </item>
 <?php endif; ?><?php endforeach; ?>
