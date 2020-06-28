@@ -4,7 +4,7 @@
   "keywords": ["yii2", "yii2-rss", "rss", "rss-feeds", "yandex-turbo", "rss", "generator", "wdmg"],
   "type": "yii2-extension",
   "license": "MIT",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "https://github.com/wdmg/yii2-rss",
   "support": {
     "source": "https://github.com/wdmg/yii2-rss",
@@ -22,7 +22,7 @@
   ],
   "require": {
     "yiisoft/yii2": "^2.0.35",
-    "wdmg/yii2-base": "^1.2.3"
+    "wdmg/yii2-base": "^1.2.4"
   },
   "minimum-stability": "dev",
   "autoload": {
