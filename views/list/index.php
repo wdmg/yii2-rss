@@ -59,24 +59,40 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="btn-group">
         <?= Html::a(Yii::t('app/modules/rss', 'Clear cache'), ['list/clear'], ['class' => 'btn btn-danger']) ?>
         <?= Html::a(Yii::t('app/modules/rss', 'View RSS-feed'), ['list/view'], [
-            'class' => 'btn btn-info view-rss',
+            'class' => 'btn btn-info',
             'data-toggle' => 'modal',
-            'data-target' => '#viewRSSFeed',
+            'data-target' => '#viewRSSFeedModal',
             'data-pjax' => '1'
         ]) ?>
     </div>
     <?php Pjax::end(); ?>
 </div>
 
-<?php $this->registerJs(<<< JS
-    $('body').delegate('.view-rss', 'click', function(event) {
+<?php
+$this->registerJs(<<< JS
+    $('body').delegate('[data-toggle="modal"][data-target]', 'click', function(event) {
+        
         event.preventDefault();
+        var target = $(event.target).data('target');
         $.get(
             $(this).attr('href'),
             function (data) {
-                $('#viewRSSFeed .modal-body').html(data);
-                $('#viewRSSFeed').modal();
-            }
+                
+                $(target).find('.modal-body').html($(data).remove('.modal-footer'));
+                if ($(data).find('.modal-footer').length > 0) {
+                    $(target).find('.modal-footer').remove();
+                    $(target).find('.modal-content').append($(data).find('.modal-footer'));
+                }
+                
+                if ($(target).find('button[type="submit"]').length > 0 && $(target).find('form').length > 0) {
+                    $(target).find('button[type="submit"]').on('click', function(event) {
+                        event.preventDefault();
+                        $(target).find('form').submit();
+                    });
+                }
+                
+                $(target).modal();
+            }  
         );
     });
 JS
@@ -85,7 +101,7 @@ JS
 <?php echo $this->render('../_debug'); ?>
 
 <?php Modal::begin([
-    'id' => 'viewRSSFeed',
+    'id' => 'viewRSSFeedModal',
     'header' => '<h4 class="modal-title">'.Yii::t('app/modules/rss', 'View RSS-feed').'</h4>',
     'clientOptions' => [
         'show' => false
