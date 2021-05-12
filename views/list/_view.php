@@ -62,7 +62,7 @@ use wdmg\widgets\SelectInput;
                     
                     html += '<div class="panel panel-primary">'
                     + '<div class="panel-heading" role="tab" id="rss-item-heading-' + i + '">'
-                    + '<h4 class="panel-title"><span class="glyphicon glyphicon-globe"/> '
+                    + '<h4 class="panel-title"><span class="glyphicon glyphicon-globe"></span> '
                     + '<a role="button" data-toggle="collapse" data-parent="#rss-feed-list" href="#rss-item-' + i + '" aria-expanded="true" aria-controls="rss-item-' + i + '">'
                     + item.title
                     + '</a>'
@@ -73,7 +73,7 @@ use wdmg\widgets\SelectInput;
                     + item.content
                     + '</div>'
                     + '<div class="panel-footer">'
-                    + '<span class="glyphicon glyphicon-calendar"/> '
+                    + '<span class="glyphicon glyphicon-calendar"></span> '
                     + item.pubDate
                     + item.author
                     + '<a href="' + item.link + '" target="_blank" data-pjax="0" class="pull-right">'
