@@ -1,7 +1,8 @@
 Changelog
 =========
 
-## 1.0.*
+## 1.1.0 (2023-07-06)
+ * Update copyrights, fix menu dashboard
  * Show modal call fixed
 
 ## 1.0.4 (2020-06-28)
